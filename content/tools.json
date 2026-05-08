@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "business-card-qr",
+    "title": "Business Card QR Generator",
+    "tagline": "Turn your contact details into a scannable vCard QR code.",
+    "description": "Paste in your name, role, phone, email, company and website — get a QR code that pops your full contact card into the scanner's phone in one tap. Free, no signup, no watermark.",
+    "category": "Productivity",
+    "url": "",
+    "image": "",
+    "tags": ["qr", "vcard", "business-card", "free-tool"],
+    "featured": true,
+    "publishedAt": "2025-09-01"
+  },
+  {
+    "slug": "email-validator",
+    "title": "Email Deliverability Checker",
+    "tagline": "Find out if an email address actually works before you send.",
+    "description": "Validates syntax, MX records, disposable-domain checks and SMTP handshake to tell you whether an email address is real and reachable. Useful for sales, hiring, and cleaning lists.",
+    "category": "Email & Outreach",
+    "url": "",
+    "image": "",
+    "tags": ["email", "deliverability", "validation", "free-tool"],
+    "featured": true,
+    "publishedAt": "2025-10-01"
+  },
+  {
+    "slug": "market-sizer",
+    "title": "Market Sizer",
+    "tagline": "Quick TAM / SAM / SOM estimates from a few inputs.",
+    "description": "Plug in a market, geography, and price point. Get a defensible top-down + bottom-up market sizing you can drop into a deck.",
+    "category": "Market Research",
+    "url": "",
+    "image": "",
+    "tags": ["market-research", "tam", "sam", "som"],
+    "featured": true,
+    "publishedAt": "2026-01-15"
+  },
+  {
+    "slug": "competitor-pulse",
+    "title": "Competitor Pulse",
+    "tagline": "Monitor competitor sites, pricing, and news in one feed.",
+    "description": "Add a list of competitor URLs and we surface what changed — pricing pages, new features, leadership moves, press mentions. Daily digest by email.",
+    "category": "Market Research",
+    "url": "",
+    "image": "",
+    "tags": ["competitive-intelligence", "monitoring", "research"],
+    "featured": false,
+    "publishedAt": "2026-02-20"
+  }
+]

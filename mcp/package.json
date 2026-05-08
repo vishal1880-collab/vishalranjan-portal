@@ -1,0 +1,24 @@
+{
+  "name": "vishalranjan-mcp",
+  "version": "1.0.0",
+  "description": "MCP server to manage vishalranjan.com content (tools, posts, companies, profile) and email-ID requests via the portal admin API.",
+  "type": "module",
+  "bin": {
+    "vishalranjan-mcp": "dist/server.js"
+  },
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json --watch",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "@octokit/rest": "^21.0.2",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "typescript": "^5.5.3"
+  }
+}

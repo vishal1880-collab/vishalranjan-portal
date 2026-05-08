@@ -11,7 +11,6 @@ export default function AboutPage() {
   return (
     <article className="max-w-prose mx-auto px-5 py-16 prose-custom">
       <h1 className="text-3xl font-semibold">About {profile.name}</h1>
-      <p className="text-3xl font-semibold">About {profile.name}</h1>
       <p>{profile.bio}</p>
       <h2>What I work on</h2>
       <ul>

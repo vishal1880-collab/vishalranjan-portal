@@ -1,0 +1,29 @@
+[
+  {
+    "slug": "imarc",
+    "name": "IMARC Services Private Limited",
+    "role": "Founder",
+    "summary": "Global market research and consulting firm covering 200+ industries with syndicated reports, custom research, and strategy advisory.",
+    "url": "https://www.imarcgroup.com",
+    "industry": "Market Research",
+    "founded": ""
+  },
+  {
+    "slug": "claight",
+    "name": "Claight Corporation",
+    "role": "Founder",
+    "summary": "Market research, business intelligence, and consulting — operator of Expert Market Research and related properties.",
+    "url": "https://www.expertmarketresearch.com",
+    "industry": "Market Research",
+    "founded": ""
+  },
+  {
+    "slug": "kamrit",
+    "name": "KAMRIT Financial Services LLP",
+    "role": "Founder",
+    "summary": "Financial services and advisory.",
+    "url": "",
+    "industry": "Financial Services",
+    "founded": ""
+  }
+]
