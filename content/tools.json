@@ -22,7 +22,7 @@
     "tagline": "Find out if an email address actually works before you send.",
     "description": "Validates syntax, MX records, disposable-domain checks and SMTP handshake to tell you whether an email address is real and reachable. Useful for sales, hiring, and cleaning lists.",
     "category": "Email & Outreach",
-    "url": "",
+    "url": "https://tools.vishalranjan.com",
     "image": "",
     "tags": [
       "email",
