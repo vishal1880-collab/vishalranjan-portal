@@ -3,11 +3,16 @@
     "slug": "business-card-qr",
     "title": "Business Card QR Generator",
     "tagline": "Turn your contact details into a scannable vCard QR code.",
-    "description": "Paste in your name, role, phone, email, company and website — get a QR code that pops your full contact card into the scanner's phone in one tap. Free, no signup, no watermark.",
+    "description": "Paste in your name, role, phone, email, company and website to get a QR code that pops your full contact card into the scanner's phone in one tap. Free, no signup, no watermark.",
     "category": "Productivity",
     "url": "",
     "image": "",
-    "tags": ["qr", "vcard", "business-card", "free-tool"],
+    "tags": [
+      "qr",
+      "vcard",
+      "business-card",
+      "free-tool"
+    ],
     "featured": true,
     "publishedAt": "2025-09-01"
   },
@@ -19,7 +24,12 @@
     "category": "Email & Outreach",
     "url": "",
     "image": "",
-    "tags": ["email", "deliverability", "validation", "free-tool"],
+    "tags": [
+      "email",
+      "deliverability",
+      "validation",
+      "free-tool"
+    ],
     "featured": true,
     "publishedAt": "2025-10-01"
   },
@@ -31,7 +41,12 @@
     "category": "Market Research",
     "url": "",
     "image": "",
-    "tags": ["market-research", "tam", "sam", "som"],
+    "tags": [
+      "market-research",
+      "tam",
+      "sam",
+      "som"
+    ],
     "featured": true,
     "publishedAt": "2026-01-15"
   },
@@ -43,7 +58,11 @@
     "category": "Market Research",
     "url": "",
     "image": "",
-    "tags": ["competitive-intelligence", "monitoring", "research"],
+    "tags": [
+      "competitive-intelligence",
+      "monitoring",
+      "research"
+    ],
     "featured": false,
     "publishedAt": "2026-02-20"
   }
