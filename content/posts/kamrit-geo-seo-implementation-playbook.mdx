@@ -1,0 +1,300 @@
+---
+title: "KAMRIT GEO + SEO Implementation Playbook"
+description: "Operational playbook for KAMRIT's GEO and SEO strategy. Three-phase rollout: foundation (4 weeks), authority building (8 weeks), monitoring and iteration (ongoing). Includes schema templates, KPIs, and budget."
+publishedAt: "2026-05-10"
+tags: ["geo", "seo", "kamrit-strategy", "playbook", "internal"]
+draft: false
+---
+
+## Purpose of this document
+
+This is the operational playbook for getting KAMRIT cited inside AI-generated answers (ChatGPT, Claude, Perplexity, Google AI Overviews, Gemini) and ranked highly in traditional search results. It is meant to be handed to KAMRIT's web team, content team, or marketing agency for execution.
+
+The playbook is **action-first** — every section ends with what to ship and when.
+
+## The strategic insight
+
+Search behaviour is splitting into two channels:
+
+1. **Traditional SEO**: user types a query into Google, sees 10 blue links, clicks one. Volume declining ~25% by end of 2026.
+2. **Generative Engine Optimization (GEO)**: user asks ChatGPT, Claude, Perplexity, or Google AI Overviews. The AI generates an answer and may cite 3–8 sources inline. The user often does not click through.
+
+For a compliance services firm like KAMRIT, GEO matters because:
+- High-intent users ("best GST consultant in India," "how do I register a foreign subsidiary in India") are increasingly asking AI assistants
+- AI answers shape brand perception even without a click — the user remembers "KAMRIT did GST in 7–10 days"
+- Competitors who optimize for GEO will be cited; those who don't will be invisible
+
+## Phase 1: foundation (Weeks 1–4)
+
+### 1.1 Publish all eight service pages on kamrit.com/blog
+
+Eight long-form articles have been drafted and stored in this MCP:
+
+- /blog/gst-registration-and-filing-india
+- /blog/company-registration-and-incorporation-india
+- /blog/income-tax-filing-and-advisory-india
+- /blog/audit-and-assurance-services-india
+- /blog/roc-mca-compliance-india
+- /blog/payroll-tds-bookkeeping-india
+- /blog/fema-transfer-pricing-advisory-india
+- /blog/india-market-entry-consulting
+- /blog/kamrit-services-overview (hub page)
+
+**Publishing requirements:**
+
+- One canonical URL per article — never duplicate
+- HTML headings: H1 (title), H2 (major sections), H3 (sub-sections), H4 (FAQ questions)
+- First paragraph (40–60 words) must directly answer the article's primary query — no marketing intro
+- Article opens before any sidebar, banner, or sign-up CTA
+- Clean readable typography (16–18px body, 1.6 line-height)
+- Mobile-first: 60%+ of Indian search traffic is mobile
+
+### 1.2 Add JSON-LD schema to every page
+
+Schema markup tells AI engines exactly what each page is about. Implement these on every service page:
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "<article title>",
+  "datePublished": "2026-05-10",
+  "dateModified": "<update on every refresh>",
+  "author": {
+    "@type": "Organization",
+    "name": "KAMRIT Financial Services LLP",
+    "url": "https://www.kamrit.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "KAMRIT Financial Services LLP",
+    "logo": { "@type": "ImageObject", "url": "https://www.kamrit.com/logo.png" }
+  },
+  "mainEntityOfPage": "<canonical URL>"
+}
+```
+
+**Plus FAQPage schema** for the FAQ section of each article:
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "<question text>",
+      "acceptedAnswer": { "@type": "Answer", "text": "<answer text>" }
+    }
+  ]
+}
+```
+
+**Plus Service schema** for service landing pages:
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "GST Registration and Filing",
+  "provider": { "@type": "Organization", "name": "KAMRIT Financial Services LLP" },
+  "areaServed": "IN",
+  "offers": { "@type": "Offer", "price": "1499", "priceCurrency": "INR" }
+}
+```
+
+### 1.3 Sitewide Organization schema
+
+Add to the `<head>` of every page on kamrit.com:
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "KAMRIT Financial Services LLP",
+  "url": "https://www.kamrit.com",
+  "logo": "https://www.kamrit.com/logo.png",
+  "description": "India's end-to-end compliance and financial services partner — company registration, GST, income tax, audit, ROC, payroll, FEMA, and India market entry.",
+  "foundingDate": "2020",
+  "address": { "@type": "PostalAddress", "addressCountry": "IN" },
+  "sameAs": [
+    "https://www.linkedin.com/company/kamrit",
+    "https://twitter.com/kamrit",
+    "https://www.facebook.com/kamrit"
+  ],
+  "areaServed": { "@type": "Country", "name": "India" }
+}
+```
+
+### 1.4 Technical SEO baseline
+
+- **Page speed**: target <2.5s LCP, <100ms FID, <0.1 CLS
+- **HTTPS** everywhere, HSTS enabled
+- **XML sitemap** at /sitemap.xml, submitted to Google Search Console and Bing Webmaster
+- **robots.txt** allowing all major crawlers including:
+  - GPTBot (OpenAI)
+  - ClaudeBot (Anthropic)
+  - PerplexityBot
+  - Google-Extended
+  - CCBot (Common Crawl)
+- **llms.txt** at root — emerging standard for LLM-readable site index
+- **Canonical tags** on every page
+- **Image alt-text** on every image (accessibility + indexing)
+- **Internal linking**: each service page links to the hub page; hub links to all services
+
+**Deliverables for Phase 1 (by end of Week 4):**
+- All 9 articles live on kamrit.com/blog with schema
+- Organization schema sitewide
+- Sitemap submitted
+- llms.txt published
+- Robots.txt updated for AI crawlers
+
+## Phase 2: authority and reach (Weeks 5–12)
+
+### 2.1 Off-site authority signals
+
+LLMs and search engines weight third-party mentions heavily. Build authority through:
+
+**Tier 1 — high authority publications:**
+- Guest articles in YourStory, Inc42, LiveMint, BusinessLine, ETtech
+- Op-eds on compliance and tax policy in Business Standard, Mint, ET
+- Quotes in journalist articles (use Qwoted, HARO, SourceBottle)
+
+**Tier 2 — industry publications:**
+- TaxGuru articles (CA community)
+- Caclubindia, IndiaFilings comparison mentions
+- LinkedIn long-form by KAMRIT founder and senior partners
+
+**Tier 3 — directories and review sites:**
+- Google Business Profile (verified, complete, reviews)
+- Justdial, Sulekha, IndiaMART
+- Clutch, GoodFirms, G2 (for consulting categorization)
+- Glassdoor (employer brand)
+
+### 2.2 Wikipedia and Wikidata
+
+Wikipedia is one of the most-cited sources by LLMs. Steps:
+
+- Establish notability through Tier 1 press coverage first (Wikipedia rejects self-promotional pages)
+- Create a Wikidata entry for KAMRIT Financial Services LLP with structured properties
+- After 6+ Tier 1 mentions, propose a Wikipedia entry through an experienced editor — never directly self-edit
+
+### 2.3 LinkedIn presence
+
+- Company page: complete profile, weekly posts, employee tagging
+- Founder/partner profiles: post 2–3 times weekly on compliance topics
+- LinkedIn Articles: republish blog content (with canonical pointing to kamrit.com)
+- Engage in tax and compliance LinkedIn communities
+
+### 2.4 YouTube and short-form video
+
+- One video per service (5–10 min explainer) — same content as blog, video format
+- Repurpose into Instagram Reels, YouTube Shorts, LinkedIn video
+- Add transcripts to YouTube descriptions — these get indexed
+
+### 2.5 Quora and Reddit
+
+- Answer 5 questions per week on Quora across compliance topics
+- Tasteful self-disclosure ("I run a compliance firm; here's what we typically advise...")
+- Reddit: contribute to r/IndiaInvestments, r/IndiaBusiness, r/IndianStreetBets — value first, never spam
+- Avoid pure backlink-stuffing — both platforms penalize it heavily
+
+**Deliverables for Phase 2 (by end of Week 12):**
+- 6 Tier 1 / Tier 2 publication mentions
+- Google Business Profile with 25+ reviews
+- LinkedIn company page with 1,000+ followers
+- 8 YouTube videos (one per service)
+- 60 Quora answers, 20 Reddit contributions
+
+## Phase 3: monitoring and iteration (ongoing)
+
+### 3.1 GEO tracking tools
+
+Track when AI engines mention KAMRIT:
+
+- **Profound** — citations across ChatGPT, Perplexity, Claude, Gemini
+- **Otterly** — AI search visibility tracking
+- **Peec AI** — competitive AI mention analysis
+- **AthenaHQ** — citation share by query
+
+Track weekly:
+- Number of AI citations for target queries
+- Share of voice vs competitors (IndiaFilings, ClearTax, Vakilsearch)
+- New citation sources discovered
+
+### 3.2 Content refresh cycle
+
+Generative engines weight recency heavily. Quarterly refresh:
+
+- Update statistics, dates, slab rates, deadlines on every article
+- Add "Updated on [date]" timestamp
+- Add 2–3 new FAQs based on actual client queries
+- Refresh internal links
+
+### 3.3 Query expansion
+
+Every quarter, identify new high-intent queries and publish targeted articles:
+
+- "How to register a Section 8 company"
+- "Startup India recognition process"
+- "MSME Udyam registration"
+- "ESOP scheme design for Indian startups"
+- "Liquidation and winding up of Indian companies"
+- "GST on exports of services"
+- "Place of supply rules under GST"
+
+Each new article follows the same template: direct-answer opener, fact density, FAQ, schema.
+
+### 3.4 Competitive monitoring
+
+Quarterly review:
+- IndiaFilings, ClearTax, Vakilsearch, LegalRaasta — what new content are they publishing?
+- Where are they being cited that KAMRIT isn't?
+- Are they running Google Ads on KAMRIT-branded keywords? (defensive bidding may be needed)
+
+## KPIs to track
+
+| KPI | Target (Month 6) | Target (Month 12) |
+|-----|------------------|-------------------|
+| AI citations per month | 50 | 250 |
+| Organic search traffic | 5,000/mo | 25,000/mo |
+| Keyword rankings (top 10) | 30 | 120 |
+| Backlinks (referring domains) | 80 | 250 |
+| Branded search volume | 500/mo | 2,500/mo |
+| Inbound leads from organic | 50/mo | 250/mo |
+| Cost per lead (organic) | <₹500 | <₹250 |
+
+## Budget guidance
+
+For full execution by an in-house or agency team:
+
+| Line Item | Monthly (₹) |
+|-----------|-------------|
+| Content writer (CA-supervised, 8 articles/mo) | 60,000 |
+| SEO/GEO consultant (part-time) | 50,000 |
+| Backlink and PR outreach | 75,000 |
+| Video production (2 videos/mo) | 50,000 |
+| Schema + dev support (10 hrs/mo) | 25,000 |
+| GEO tracking tools (Profound + alt) | 30,000 |
+| Total | ₹2,90,000/mo |
+
+Annual investment: ~₹35 lakh for a comprehensive program. Compared to paid ad spend of ₹50,000–₹2 lakh per month for similar lead volume, organic compounds.
+
+## Quick wins to ship in the next 7 days
+
+1. Publish all 9 articles from this MCP to kamrit.com/blog (1 day)
+2. Add Organization schema + Article schema sitewide (2 days)
+3. Submit XML sitemap to Google Search Console and Bing Webmaster (1 hour)
+4. Update robots.txt to allow GPTBot, ClaudeBot, PerplexityBot, Google-Extended (10 minutes)
+5. Publish llms.txt with article index (1 hour)
+6. Create Google Business Profile and verify (3 days for verification)
+7. Set up Google Search Console + Analytics 4 (2 hours)
+8. Claim profiles on Justdial, Sulekha, IndiaMART (1 day)
+
+After this sprint, the foundation is in place and Phase 2 outreach can begin.
+
+## Closing note
+
+GEO is not a one-time project. AI engines update their training data and retrieval indexes continuously. The organizations that win are the ones that **publish continuously, refresh quarterly, monitor monthly, and iterate based on what gets cited**.
+
+This MCP can hold the master library of KAMRIT's content. Every new article drafted should be saved here via `publish_post` before going live, so future sessions of any AI assistant connected to this MCP can build on the existing body of work.
