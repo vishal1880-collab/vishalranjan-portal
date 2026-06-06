@@ -1,0 +1,21 @@
+---
+title: "GST e-invoice mandatory threshold reduced to ₹2 crore from August 2026: the IRP migration plan"
+description: "GST e-invoice mandatory threshold drops from ₹5 crore to ₹2 crore aggregate turnover from August 1, 2026. The Invoice Registration Portal migration plan and operational impact on mid-MSME taxpayers."
+publishedAt: "2026-05-25"
+tags: ["GST", "e-invoice", "IRP", "IRN", "CBIC"]
+draft: false
+---
+
+The Central Board of Indirect Taxes and Customs issued Notification 17/2026-Central Tax dated May 16, 2026 reducing the e-invoice mandatory threshold from ₹5 crore to ₹2 crore aggregate annual turnover, effective August 1, 2026. The August 2026 step brings approximately 4 lakh additional taxpayers within the e-invoicing perimeter, predominantly mid-MSME businesses in manufacturing, distribution, and B2B services.
+
+The threshold check is based on aggregate turnover in any preceding financial year, not the current year. Businesses that crossed ₹2 crore in any year from 2017-18 onwards are within scope of the August 2026 rule, even if their current-year turnover is below the threshold. The aggregate turnover definition under Section 2(6) of the CGST Act includes all GSTINs of the PAN, so the threshold check operates at the PAN level not the individual GSTIN level.
+
+The Invoice Registration Portal (IRP) is the system that validates and registers each B2B invoice issued by a taxpayer within the e-invoicing perimeter. Four IRPs are currently operational: NIC IRP1, NIC IRP2, IRIS, and ClearTax. All B2B invoices above the threshold must be uploaded to an IRP before being delivered to the recipient. The IRP validates the invoice structure (mandatory fields, GSTIN validity, HSN code, tax rates), generates a unique Invoice Reference Number (IRN), and returns a signed QR code. The invoice is not legally valid for GST purposes without the IRN.
+
+The ERP integration timeline for newly-covered taxpayers depends on the current invoicing infrastructure. For businesses with structured ERP (Tally, SAP, Oracle, Zoho Books, BUSY), the migration is typically three weeks of focused work: IRP API credentials, ERP plugin or middleware configuration to push invoices to the IRP automatically, invoice template restructuring to include the IRN and QR code in the printed invoice, and testing in the IRP sandbox environment. For businesses on Excel-based invoicing or basic accounting software, the migration typically requires switching to a structured invoice tool first, which adds 4-8 weeks.
+
+The compliance consequence of issuing a B2B invoice without IRN after August 1, 2026 for a taxpayer within the perimeter is that the invoice is treated as not having been issued under Rule 48(5) of the CGST Rules. The supplier becomes liable to issue a fresh invoice with valid IRN, the recipient cannot claim Input Tax Credit on the invalid invoice, and the supplier may face penalty under Section 122 for issuing an invoice without proper authorisation under the rules.
+
+For taxpayers in the ₹2-5 crore band who are already using third-party invoicing platforms (Zoho, ClearTax, MyBillBook), the platforms have indicated they will provide automated IRP integration for affected accounts by July 15, 2026.
+
+KAMRIT's GST desk handles e-invoice readiness assessment including IRP API credential set-up, ERP integration, invoice template restructuring, and the first 90 days of monitored go-live for newly-covered taxpayers.
